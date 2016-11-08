@@ -201,6 +201,8 @@ else:
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PrimaryTitle_ | `rdfs:label` | `crm:E35_Title1`|
 | _PrimaryTitleTranslationTypeURI_ | `uri` | `crm:E55_Type6`|
+| _PrimaryTitleTranslationTypeURI_ | `uri` | `crm:E55_Type6`|
+| _PrimaryTitleTransltionType_ | `rdfs:label` | `crm:E55_Type6`|
 | _PrimaryTitleTransltionType_ | `rdfs:label` | `crm:E55_Type6`|
 | _PrimaryTitleType_ | `rdfs:label` | `crm:E55_Type2`|
 | _PrimaryTitleTypeURI_ | `uri` | `crm:E55_Type2`|
