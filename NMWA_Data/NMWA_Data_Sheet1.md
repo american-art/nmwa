@@ -88,6 +88,57 @@ From column: _DisplayNameURI_
 return getValue("ObjectURI") + "/displayName"
 ```
 
+#### _PrimaryTitle_
+From column: _PrimaryTitle_
+``` python
+return getValue("Title")
+```
+
+#### _PrimaryTitleURI_
+From column: _PrimaryTitleURI_
+``` python
+if getValue("PrimaryTitle"):
+    return "thesauri/title/" + getValue("Title").lower().replace(' ', '_')
+else:
+    return ''
+```
+
+#### _PrimaryTitleType_
+From column: _PrimaryTitleType_
+``` python
+if getValue("PrimaryTitle"):
+    return "thesauri/title/" + getValue("Title").lower().replace(' ', '_')
+else:
+    return ''
+```
+
+#### _PrimaryTitleTypeURI_
+From column: _PrimaryTitleTypeURI_
+``` python
+if getValue("PrimaryTitle"):
+    return "thesauri/title/" + getValue("Title").lower().replace(' ', '_')
+else:
+    return ''
+```
+
+#### _PrimaryTitleTranslationTypeURI_
+From column: _PrimaryTitleTranslationTypeURI_
+``` python
+if getValue("PrimaryTitle"):
+    return "Not Translatable"
+else:
+    return ''
+```
+
+#### _PrimaryTitleTransltionType_
+From column: _PrimaryTitleTransltionType_
+``` python
+if getValue("PrimaryTitle"):
+    return "thesauri/title/" + getValue("Title").lower().replace(' ', '_')
+else:
+    return ''
+```
+
 
 ### Semantic Types
 | Column | Property | Class |
@@ -135,8 +186,6 @@ return getValue("ObjectURI") + "/displayName"
 | _FirstName_ | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation1`|
 | _LastName_ | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation1`|
 | _Media_ | `rdfs:label` | `crm:E55_Type4`|
-| _Media_ | `rdfs:label` | `crm:E55_Type2`|
-| _MediaURI_ | `uri` | `crm:E55_Type2`|
 | _MediaURI_ | `uri` | `crm:E55_Type4`|
 | _Medium_ | `crm:P3_has_note` | `crm:E55_Type3`|
 | _Medium_ | `crm:P3_has_note` | `crm:E55_Type3`|
@@ -150,12 +199,16 @@ return getValue("ObjectURI") + "/displayName"
 | _ObjectNumberURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _PrimaryTitle_ | `rdfs:label` | `crm:E35_Title1`|
+| _PrimaryTitleTranslationTypeURI_ | `uri` | `crm:E55_Type6`|
+| _PrimaryTitleTransltionType_ | `rdfs:label` | `crm:E55_Type6`|
+| _PrimaryTitleType_ | `rdfs:label` | `crm:E55_Type2`|
+| _PrimaryTitleTypeURI_ | `uri` | `crm:E55_Type2`|
+| _PrimaryTitleURI_ | `uri` | `crm:E35_Title1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
 | _Suffix_ | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation1`|
 | _Title_ | `rdfs:label` | `crm:E35_Title1`|
-| _Title_ | `rdfs:label` | `crm:E35_Title1`|
-| _TitleURI_ | `uri` | `crm:E35_Title1`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
 
 
@@ -171,9 +224,10 @@ return getValue("ObjectURI") + "/displayName"
 | `crm:E22_Man-Made_Object1` | `crm:P48_has_preferred_identifier` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P43_has_dimension` | `crm:E54_Dimension1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type4`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type5`|
+| `crm:E35_Title1` | `crm:P2_has_type` | `crm:E55_Type2`|
+| `crm:E35_Title1` | `crm:P2_has_type` | `crm:E55_Type6`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor2` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation2`|
