@@ -34,7 +34,7 @@ return "aat:300026687"
 #### _ClassificationURI_
 From column: _ClassificationURI_
 ``` python
-return getValue("ObjectURI")+"/classificiation"
+return getValue("ObjectURI")+"/classification"
 ```
 
 #### _CultureURI_
@@ -103,7 +103,7 @@ else:
 #### _MaterialURI_
 From column: _MaterialURI_
 ``` python
-return UM.uri_from_fields("thesauri/material/",getValue("Medium"))
+return UM.uri_from_fields("material/",getValue("Medium"))
 ```
 
 #### _DimensionURI_
@@ -116,6 +116,27 @@ return getValue("ObjectURI")+"/dimension"
 From column: _DescriptionURI_
 ``` python
 return getValue("ObjectURI")+"/description"
+```
+
+#### _ObjectURL1_
+From column: _Object Details Web Page/ Link to Object on Website_
+``` python
+if getValue("Object Details Web Page/ Link to Object on Website") == "None":
+    return ""
+else:
+     return getValue("Object Details Web Page/ Link to Object on Website")
+```
+
+#### _ObjectURLLabel_
+From column: _ObjectURL1_
+``` python
+return getValue("ObjectURL1")
+```
+
+#### _ObjectNumberValue_
+From column: _Object Number_
+``` python
+return getValue("Object Number")
 ```
 
 
@@ -136,6 +157,7 @@ return getValue("ObjectURI")+"/description"
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _CopyRightURI_ | `uri` | `crm:E30_Right1`|
 | _Copyright_ | `crm:P3_has_note` | `crm:E30_Right1`|
+| _Credit_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _Credit_ | `crm:P3_has_note` | `crm:E82_Actor_Appellation1`|
 | _CreditType_ | `crm:P2_has_type` | `crm:E33_Linguistic_Object1`|
 | _CreditURI_ | `uri` | `crm:E33_Linguistic_Object1`|
@@ -154,6 +176,7 @@ return getValue("ObjectURI")+"/description"
 | _Department_ | `rdfs:label` | `crm:E55_Type3`|
 | _DepartmentURI_ | `uri` | `crm:E55_Type6`|
 | _DepartmentURI_ | `uri` | `crm:E55_Type5`|
+| _Description_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _Description_ | `crm:P3_has_note` | `crm:E33_Linguistic_Object1`|
 | _Description_ | `rdfs:label` | `crm:E18_Physical_Thing1`|
 | _DescriptionLinguisticObjectURI_ | `uri` | `crm:E33_Linguistic_Object3`|
@@ -161,10 +184,11 @@ return getValue("ObjectURI")+"/description"
 | _DescriptionURI_ | `uri` | `crm:E18_Physical_Thing1`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object3`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object1`|
-| _DimensionLinguisticObjectURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _DimensionLinguisticObjectURI_ | `uri` | `crm:E33_Linguistic_Object4`|
 | _DimensionType_ | `uri` | `crm:E55_Type8`|
+| _DimensionURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _DimensionURI_ | `uri` | `crm:E54_Dimension1`|
+| _Dimensions_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _Dimensions_ | `crm:P3_has_note` | `crm:E54_Dimension1`|
 | _Display Name_ | `rdfs:label` | `crm:E39_Actor1`|
 | _Display Name_ | `rdfs:label` | `crm:E39_Actor1`|
@@ -197,8 +221,11 @@ return getValue("ObjectURI")+"/description"
 | _ObjectNumberType_ | `crm:P2_has_type` | `crm:E42_Identifier1`|
 | _ObjectNumberURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectNumberURI_ | `uri` | `crm:E42_Identifier1`|
+| _ObjectNumberValue_ | `rdf:value` | `crm:E42_Identifier1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _ObjectURL1_ | `uri` | `foaf:Document1`|
+| _ObjectURLLabel_ | `rdfs:label` | `foaf:Document1`|
 | _Period_ | `rdfs:label` | `crm:E4_Period1`|
 | _PeriodURI_ | `uri` | `crm:E4_Period1`|
 | _PrimaryTitle_ | `rdfs:label` | `crm:E35_Title1`|
@@ -231,8 +258,9 @@ return getValue("ObjectURI")+"/description"
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type4`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type6`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
-| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:aat:300026687`|
-| `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `xsd:aat:300266036`|
-| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `xsd:aat:300080091`|
-| `crm:E35_Title1` | `crm:P2_has_type` | `xsd:aat:300403012`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:aat:300404621`|
+| `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300026687`|
+| `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300266036`|
+| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300080091`|
+| `crm:E35_Title1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300403012`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404621`|
