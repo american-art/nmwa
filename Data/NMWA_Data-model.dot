@@ -39,23 +39,24 @@ n33[shape="plaintext",style="filled",fillcolor="gold",label="DateValid"];
 n34[shape="plaintext",style="filled",fillcolor="gold",label="ObjectNumberURI"];
 n35[shape="plaintext",style="filled",fillcolor="gold",label="ProductionURI"];
 n36[shape="plaintext",style="filled",fillcolor="gold",label="Dimensions"];
-n37[shape="plaintext",style="filled",fillcolor="gold",label="Medium"];
-n38[shape="plaintext",style="filled",fillcolor="gold",label="CultureURI"];
-n39[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURL1"];
-n40[shape="plaintext",style="filled",fillcolor="gold",label="CultureTypeURI"];
-n41[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURLLabel"];
-n42[shape="plaintext",style="filled",fillcolor="gold",label="DimensionURI"];
-n43[shape="plaintext",style="filled",fillcolor="gold",label="PrimaryTitle"];
-n44[shape="plaintext",style="filled",fillcolor="gold",label="PrimaryTitleLabel"];
-n45[shape="plaintext",style="filled",fillcolor="gold",label="TimespanURI"];
-n46[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300266036"];
-n47[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300026687"];
-n48[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404621"];
-n49[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
-n50[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300179869"];
-n51[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300015646"];
-n52[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300080091"];
-n53[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n37[shape="plaintext",style="filled",fillcolor="gold",label="Description"];
+n38[shape="plaintext",style="filled",fillcolor="gold",label="Medium"];
+n39[shape="plaintext",style="filled",fillcolor="gold",label="CultureURI"];
+n40[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURL1"];
+n41[shape="plaintext",style="filled",fillcolor="gold",label="CultureTypeURI"];
+n42[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURLLabel"];
+n43[shape="plaintext",style="filled",fillcolor="gold",label="DimensionURI"];
+n44[shape="plaintext",style="filled",fillcolor="gold",label="PrimaryTitle"];
+n45[shape="plaintext",style="filled",fillcolor="gold",label="PrimaryTitleLabel"];
+n46[shape="plaintext",style="filled",fillcolor="gold",label="TimespanURI"];
+n47[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300266036"];
+n48[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300026687"];
+n49[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404621"];
+n50[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n51[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300179869"];
+n52[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300015646"];
+n53[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300080091"];
+n54[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P14_carried_out_by"]
 n2 -> n4[color="brown",fontcolor="black",label="P4_has_time-span"]
@@ -91,23 +92,24 @@ n4 -> n33[color="brown",fontcolor="black",label="label"]
 n15 -> n34[color="brown",fontcolor="black",label="classLink"]
 n2 -> n35[color="brown",fontcolor="black",label="classLink"]
 n11 -> n36[color="brown",fontcolor="black",label="value"]
-n16 -> n37[color="brown",fontcolor="black",label="prefLabel"]
-n5 -> n38[color="brown",fontcolor="black",label="classLink"]
-n17 -> n39[color="brown",fontcolor="black",label="classLink"]
-n6 -> n40[color="brown",fontcolor="black",label="classLink"]
-n17 -> n41[color="brown",fontcolor="black",label="label"]
-n11 -> n42[color="brown",fontcolor="black",label="classLink"]
-n13 -> n43[color="brown",fontcolor="black",label="value"]
-n9 -> n44[color="brown",fontcolor="black",label="label"]
-n4 -> n45[color="brown",fontcolor="black",label="classLink"]
-n11 -> n46[color="brown",fontcolor="black",label="P2_has_type"]
-n10 -> n47[color="brown",fontcolor="black",label="P2_has_type"]
-n15 -> n48[color="brown",fontcolor="black",label="P2_has_type"]
+n12 -> n37[color="brown",fontcolor="black",label="value"]
+n16 -> n38[color="brown",fontcolor="black",label="prefLabel"]
+n5 -> n39[color="brown",fontcolor="black",label="classLink"]
+n17 -> n40[color="brown",fontcolor="black",label="classLink"]
+n6 -> n41[color="brown",fontcolor="black",label="classLink"]
+n17 -> n42[color="brown",fontcolor="black",label="label"]
+n11 -> n43[color="brown",fontcolor="black",label="classLink"]
+n13 -> n44[color="brown",fontcolor="black",label="value"]
+n9 -> n45[color="brown",fontcolor="black",label="label"]
+n4 -> n46[color="brown",fontcolor="black",label="classLink"]
+n11 -> n47[color="brown",fontcolor="black",label="P2_has_type"]
+n10 -> n48[color="brown",fontcolor="black",label="P2_has_type"]
+n15 -> n49[color="brown",fontcolor="black",label="P2_has_type"]
 n9 -> n10[color="brown",fontcolor="black",label="P67i_is_referred_to_by"]
-n13 -> n49[color="brown",fontcolor="black",label="P2_has_type"]
-n7 -> n50[color="brown",fontcolor="black",label="P21_had_general_purpose"]
-n5 -> n51[color="brown",fontcolor="black",label="P21_had_general_purpose"]
-n12 -> n52[color="brown",fontcolor="black",label="P2_has_type"]
-n9 -> n8[color="brown",fontcolor="black",label="P2_has_type"]
+n13 -> n50[color="brown",fontcolor="black",label="P2_has_type"]
+n7 -> n51[color="brown",fontcolor="black",label="P21_had_general_purpose"]
+n5 -> n52[color="brown",fontcolor="black",label="P21_had_general_purpose"]
 n12 -> n53[color="brown",fontcolor="black",label="P2_has_type"]
+n9 -> n8[color="brown",fontcolor="black",label="P2_has_type"]
+n12 -> n54[color="brown",fontcolor="black",label="P2_has_type"]
 }
