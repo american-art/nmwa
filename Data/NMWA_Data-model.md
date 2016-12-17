@@ -232,7 +232,7 @@ return getValue("ObjectURI")+"/production"
 #### _ActorURI_
 From column: _ActorURI_
 ``` python
-return getValue("ObjectURI")+"/attribution"
+return "constituent/"+SM.fingerprint_string(getValue("Display Name"))
 ```
 
 #### _TimespanURI_
@@ -354,6 +354,7 @@ return getValue("Display Name")
 | _CultureTypeURI_ | `uri` | `crm:E55_Type4`|
 | _CultureURI_ | `uri` | `crm:E17_Type_Assignment1`|
 | _DateValid_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _Description_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object3`|
 | _DimensionURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _Dimensions_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
