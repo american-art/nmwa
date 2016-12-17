@@ -99,6 +99,11 @@
             "columnName": "Dimensions"
         },
         {
+            "id": "HN27",
+            "hNodeId": "HN27",
+            "columnName": "Description"
+        },
+        {
             "id": "HN25",
             "hNodeId": "HN25",
             "columnName": "Medium"
@@ -146,44 +151,24 @@
     ],
     "mappingToSourceColumns": [
         {
-            "id": "HN315",
-            "sourceColumnId": "HN315"
-        },
-        {
-            "id": "HN14",
-            "sourceColumnId": "HN14"
+            "id": "HN423",
+            "sourceColumnId": "HN423"
         },
         {
             "id": "HN343",
             "sourceColumnId": "HN343"
         },
         {
-            "id": "HN423",
-            "sourceColumnId": "HN423"
-        },
-        {
-            "id": "HN411",
-            "sourceColumnId": "HN411"
+            "id": "HN14",
+            "sourceColumnId": "HN14"
         },
         {
             "id": "HN15",
             "sourceColumnId": "HN15"
         },
         {
-            "id": "HN26",
-            "sourceColumnId": "HN26"
-        },
-        {
-            "id": "HN25",
-            "sourceColumnId": "HN25"
-        },
-        {
             "id": "HN637",
             "sourceColumnId": "HN637"
-        },
-        {
-            "id": "HN395",
-            "sourceColumnId": "HN395"
         },
         {
             "id": "HN383",
@@ -194,12 +179,68 @@
             "sourceColumnId": "HN10"
         },
         {
-            "id": "HN578",
-            "sourceColumnId": "HN578"
-        },
-        {
             "id": "HN12",
             "sourceColumnId": "HN12"
+        },
+        {
+            "id": "HN651",
+            "sourceColumnId": "HN651"
+        },
+        {
+            "id": "HN549",
+            "sourceColumnId": "HN549"
+        },
+        {
+            "id": "HN301",
+            "sourceColumnId": "HN301"
+        },
+        {
+            "id": "HN606",
+            "sourceColumnId": "HN606"
+        },
+        {
+            "id": "HN449",
+            "sourceColumnId": "HN449"
+        },
+        {
+            "id": "HN523",
+            "sourceColumnId": "HN523"
+        },
+        {
+            "id": "HN501",
+            "sourceColumnId": "HN501"
+        },
+        {
+            "id": "HN489",
+            "sourceColumnId": "HN489"
+        },
+        {
+            "id": "HN315",
+            "sourceColumnId": "HN315"
+        },
+        {
+            "id": "HN411",
+            "sourceColumnId": "HN411"
+        },
+        {
+            "id": "HN26",
+            "sourceColumnId": "HN26"
+        },
+        {
+            "id": "HN27",
+            "sourceColumnId": "HN27"
+        },
+        {
+            "id": "HN25",
+            "sourceColumnId": "HN25"
+        },
+        {
+            "id": "HN395",
+            "sourceColumnId": "HN395"
+        },
+        {
+            "id": "HN578",
+            "sourceColumnId": "HN578"
         },
         {
             "id": "HN665",
@@ -210,36 +251,12 @@
             "sourceColumnId": "HN592"
         },
         {
-            "id": "HN549",
-            "sourceColumnId": "HN549"
-        },
-        {
-            "id": "HN651",
-            "sourceColumnId": "HN651"
-        },
-        {
             "id": "HN537",
             "sourceColumnId": "HN537"
         },
         {
-            "id": "HN449",
-            "sourceColumnId": "HN449"
-        },
-        {
-            "id": "HN606",
-            "sourceColumnId": "HN606"
-        },
-        {
-            "id": "HN301",
-            "sourceColumnId": "HN301"
-        },
-        {
             "id": "HN435",
             "sourceColumnId": "HN435"
-        },
-        {
-            "id": "HN523",
-            "sourceColumnId": "HN523"
         },
         {
             "id": "HN621",
@@ -248,14 +265,6 @@
         {
             "id": "HN477",
             "sourceColumnId": "HN477"
-        },
-        {
-            "id": "HN489",
-            "sourceColumnId": "HN489"
-        },
-        {
-            "id": "HN501",
-            "sourceColumnId": "HN501"
         }
     ],
     "graph": {
@@ -517,21 +526,7 @@
                         "confidenceScore": 1.0
                     }
                 ],
-                "learnedSemanticTypes": [
-                    {
-                        "hNodeId": "HN15",
-                        "domain": {
-                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
-                            "rdfsLabel": null
-                        },
-                        "type": {
-                            "uri": "http://isi.edu/integration/karma/dev#classLink",
-                            "rdfsLabel": null
-                        },
-                        "origin": "TfIdfModel",
-                        "confidenceScore": 1.0
-                    }
-                ],
+                "learnedSemanticTypes": null,
                 "modelIds": null
             },
             {
@@ -954,6 +949,35 @@
                 "userSemanticTypes": [
                     {
                         "hNodeId": "HN26",
+                        "domain": {
+                            "uri": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
+                            "rdfsLabel": null
+                        },
+                        "type": {
+                            "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN27",
+                "label": {
+                    "uri": "HN27",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN27",
+                "columnName": "Description",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN27",
                         "domain": {
                             "uri": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
                             "rdfsLabel": null
@@ -1773,6 +1797,18 @@
             },
             {
                 "id": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object2---http://www.w3.org/1999/02/22-rdf-syntax-ns#value---HN26",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object3---http://www.w3.org/1999/02/22-rdf-syntax-ns#value---HN27",
                 "weight": 0.01,
                 "type": "DataPropertyLink",
                 "label": {
