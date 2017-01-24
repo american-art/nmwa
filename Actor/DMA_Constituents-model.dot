@@ -1,0 +1,65 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="Dallas Museum of Art - LOD - UPDATED.csv"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E39_Actor1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E63_Beginning_of_Existence1"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E64_End_of_Existence1"];
+n6[style="filled",color="white",fillcolor="lightgray",label="E74_Group1"];
+n7[style="filled",color="white",fillcolor="lightgray",label="E82_Actor_Appellation1"];
+n8[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span1"];
+n9[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span2"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="Nationality"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentBeginDate"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="BirthDeathDisplayDate"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="NameURI"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="DisplayName"];
+n15[shape="plaintext",style="filled",fillcolor="gold",label="Gender"];
+n16[shape="plaintext",style="filled",fillcolor="gold",label="BeginDateEnd"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentURI"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="ConstituentEndDate"];
+n19[shape="plaintext",style="filled",fillcolor="gold",label="BirthYearURI"];
+n20[shape="plaintext",style="filled",fillcolor="gold",label="BirthURI"];
+n21[shape="plaintext",style="filled",fillcolor="gold",label="DeathDisplayDate"];
+n22[shape="plaintext",style="filled",fillcolor="gold",label="GenderURI"];
+n23[shape="plaintext",style="filled",fillcolor="gold",label="NationalityURI"];
+n24[shape="plaintext",style="filled",fillcolor="gold",label="NameLabel"];
+n25[shape="plaintext",style="filled",fillcolor="gold",label="DeathURI"];
+n26[shape="plaintext",style="filled",fillcolor="gold",label="DeathDateBegin"];
+n27[shape="plaintext",style="filled",fillcolor="gold",label="DeathYearURI"];
+n28[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n29[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300379842"];
+n30[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300055147"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P2_has_type"]
+n2 -> n4[color="brown",fontcolor="black",label="P92i_was_brought_into_existence_by"]
+n2 -> n5[color="brown",fontcolor="black",label="P93i_was_taken_out_of_existence_by"]
+n2 -> n6[color="brown",fontcolor="black",label="P107i_is_current_or_former_member_of"]
+n2 -> n7[color="brown",fontcolor="black",label="P131_is_identified_by"]
+n4 -> n8[color="brown",fontcolor="black",label="P4_has_time-span"]
+n5 -> n9[color="brown",fontcolor="black",label="P4_has_time-span"]
+n6 -> n10[color="brown",fontcolor="black",label="label"]
+n8 -> n11[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n8 -> n12[color="brown",fontcolor="black",label="label"]
+n7 -> n13[color="brown",fontcolor="black",label="classLink"]
+n7 -> n14[color="brown",fontcolor="black",label="value"]
+n3 -> n15[color="brown",fontcolor="black",label="label"]
+n8 -> n16[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n2 -> n17[color="brown",fontcolor="black",label="classLink"]
+n9 -> n18[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n8 -> n19[color="brown",fontcolor="black",label="classLink"]
+n4 -> n20[color="brown",fontcolor="black",label="classLink"]
+n9 -> n21[color="brown",fontcolor="black",label="label"]
+n3 -> n22[color="brown",fontcolor="black",label="classLink"]
+n6 -> n23[color="brown",fontcolor="black",label="classLink"]
+n2 -> n24[color="brown",fontcolor="black",label="label"]
+n5 -> n25[color="brown",fontcolor="black",label="classLink"]
+n9 -> n26[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n9 -> n27[color="brown",fontcolor="black",label="classLink"]
+n7 -> n28[color="brown",fontcolor="black",label="P2_has_type"]
+n6 -> n29[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n30[color="brown",fontcolor="black",label="broadMatch"]
+}
