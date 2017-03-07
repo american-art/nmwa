@@ -83,31 +83,6 @@ From column: _Object Details Web Page/ Link to Object on Website_
 
 
 ## Add Node/Literal
-#### Literal Node: `aat:300404621`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
-#### Literal Node: `aat:300026687`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
-#### Literal Node: `aat:300403012`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
-#### Literal Node: `aat:300266036`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `false`
-
-#### Literal Node: `aat:300080091`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
 #### Literal Node: `http://vocab.getty.edu/aat/300404621`
 Literal Type: ``
 <br/>Language: ``
@@ -118,17 +93,17 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
-#### Literal Node: `http://vocab.getty.edu/aat/300080091`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
-#### Literal Node: `http://vocab.getty.edu/aat/300403012`
+#### Literal Node: `http://vocab.getty.edu/aat/300404670`
 Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
 #### Literal Node: `http://vocab.getty.edu/aat/300266036`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300080091`
 Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
@@ -139,21 +114,6 @@ Literal Type: ``
 <br/>isUri: `true`
 
 #### Literal Node: `http://vocab.getty.edu/aat/300179869`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
-#### Literal Node: `http://vocab.getty.edu/aat/30080091`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
-#### Literal Node: `http://vocab.getty.edu/aat/300404670`
-Literal Type: ``
-<br/>Language: ``
-<br/>isUri: `true`
-
-#### Literal Node: `http://vocab.getty.edu/aat/300404672`
 Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
@@ -380,9 +340,9 @@ return getValue("Display Name")
 | `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type4`|
-| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `xsd:http://vocab.getty.edu/aat/300015646`|
+| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `http://vocab.getty.edu/aat/300015646`|
 | `crm:E17_Type_Assignment2` | `crm:P42_assigned` | `crm:E55_Type3`|
-| `crm:E17_Type_Assignment2` | `crm:P21_had_general_purpose` | `xsd:http://vocab.getty.edu/aat/300179869`|
+| `crm:E17_Type_Assignment2` | `crm:P21_had_general_purpose` | `http://vocab.getty.edu/aat/300179869`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment2`|
@@ -395,9 +355,3 @@ return getValue("Display Name")
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
-| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300026687`|
-| `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300266036`|
-| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300080091`|
-| `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
-| `crm:E35_Title1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404621`|
