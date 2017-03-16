@@ -297,6 +297,18 @@ From column: _ActorURI_
 return getValue("Display Name")
 ```
 
+#### _OwnerURI_
+From column: _Credit_
+``` python
+return "data.americanartcollaborative.org/nmwa"
+```
+
+#### _OwnerLabel_
+From column: _OwnerURI_
+``` python
+return "National Museum of Wildlife Art"
+```
+
 
 ## Selections
 
@@ -306,8 +318,8 @@ return getValue("Display Name")
 | _ActorURI_ | `uri` | `crm:E39_Actor1`|
 | _BeginDateValid_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _Classification_ | `rdfs:label` | `crm:E55_Type3`|
-| _ClassificationTypeURI_ | `uri` | `crm:E55_Type3`|
-| _ClassificationURI_ | `uri` | `crm:E17_Type_Assignment2`|
+| _ClassificationTypeURI_ | `uri` | `crm:E17_Type_Assignment2`|
+| _ClassificationURI_ | `uri` | `crm:E55_Type3`|
 | _Credit_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _CreditURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _Culture_ | `rdfs:label` | `crm:E55_Type4`|
@@ -327,6 +339,8 @@ return getValue("Display Name")
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _ObjectURL1_ | `uri` | `foaf:Document1`|
 | _ObjectURLLabel_ | `rdfs:label` | `foaf:Document1`|
+| _OwnerLabel_ | `rdfs:label` | `crm:E40_Legal_Body1`|
+| _OwnerURI_ | `uri` | `crm:E40_Legal_Body1`|
 | _PrimaryTitle_ | `rdf:value` | `crm:E35_Title1`|
 | _PrimaryTitleLabel_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
 | _PrimaryTitleURI_ | `uri` | `crm:E35_Title1`|
@@ -351,6 +365,7 @@ return getValue("Display Name")
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object3`|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
 | `crm:E22_Man-Made_Object1` | `crm:P138i_has_representation` | `crm:E38_Image1`|
+| `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
