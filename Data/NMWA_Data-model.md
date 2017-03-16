@@ -309,6 +309,18 @@ From column: _OwnerURI_
 return "National Museum of Wildlife Art"
 ```
 
+#### _ObjectIdLabel_
+From column: _ObjectID_
+``` python
+return getValue("ObjectID")
+```
+
+#### _ObjectIdURI_
+From column: _ObjectIdLabel_
+``` python
+return getValue("ObjectURI")+"/pref_id"
+```
+
 
 ## Selections
 
@@ -334,6 +346,9 @@ return "National Museum of Wildlife Art"
 | _MaterialURI_ | `uri` | `crm:E57_Material1`|
 | _Medium_ | `skos:prefLabel` | `crm:E57_Material1`|
 | _Object Number_ | `rdfs:label` | `crm:E42_Identifier1`|
+| _ObjectID_ | `rdf:value` | `crm:E42_Identifier2`|
+| _ObjectIdLabel_ | `rdfs:label` | `crm:E42_Identifier2`|
+| _ObjectIdURI_ | `uri` | `crm:E42_Identifier2`|
 | _ObjectNumberURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectNumberValue_ | `rdf:value` | `crm:E42_Identifier1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
@@ -367,6 +382,7 @@ return "National Museum of Wildlife Art"
 | `crm:E22_Man-Made_Object1` | `crm:P138i_has_representation` | `crm:E38_Image1`|
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
+| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
@@ -375,3 +391,4 @@ return "National Museum of Wildlife Art"
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404621`|
+| `crm:E42_Identifier2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
