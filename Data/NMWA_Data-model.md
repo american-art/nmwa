@@ -300,7 +300,7 @@ return getValue("Display Name")
 #### _OwnerURI_
 From column: _Credit_
 ``` python
-return "data.americanartcollaborative.org/nmwa"
+return "http://data.americanartcollaborative.org/nmwa"
 ```
 
 #### _OwnerLabel_
@@ -321,6 +321,12 @@ From column: _ObjectIdLabel_
 return getValue("ObjectURI")+"/pref_id"
 ```
 
+#### _DepartmentURI_
+From column: _DepartmentURI_
+``` python
+return UM.uri_from_fields("thesauri/department/",getValue("Department"))
+```
+
 
 ## Selections
 
@@ -338,6 +344,9 @@ return getValue("ObjectURI")+"/pref_id"
 | _CultureTypeURI_ | `uri` | `crm:E55_Type4`|
 | _CultureURI_ | `uri` | `crm:E17_Type_Assignment1`|
 | _DateValid_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _Department_ | `rdf:value` | `crm:E55_Type1`|
+| _Department_ | `rdfs:label` | `crm:E55_Type1`|
+| _DepartmentURI_ | `uri` | `crm:E55_Type1`|
 | _Description_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object3`|
 | _DimensionURI_ | `uri` | `crm:E33_Linguistic_Object2`|
@@ -383,6 +392,7 @@ return getValue("ObjectURI")+"/pref_id"
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
+| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
