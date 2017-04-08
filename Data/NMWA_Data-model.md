@@ -174,7 +174,10 @@ return getValue("Title")
 #### _PrimaryTitleURI_
 From column: _PrimaryTitleURI_
 ``` python
-return UM.uri_from_fields("thesauri/title/",getValue("Title"))
+if getValue("Title"):
+    return UM.uri_from_fields("thesauri/title/",getValue("Title"))
+else:
+    return ""
 ```
 
 #### _PrimaryTitleType_
@@ -186,7 +189,10 @@ return "aat:300404012"
 #### _ProductionURI_
 From column: _ProductionURI_
 ``` python
-return getValue("ObjectURI")+"/production"
+if getValue("TimeSpanURI") or getValue("ActorURI"):
+    return getValue("ObjectURI")+"/production"
+else:
+    return ""
 ```
 
 #### _ActorURI_
@@ -198,14 +204,18 @@ return "constituent/"+SM.fingerprint_string(getValue("Display Name"))
 #### _TimespanURI_
 From column: _TimespanURI_
 ``` python
-return getValue("ObjectURI")+"/timespan"
+if getValue("DateValid"):
+    return getValue("ObjectURI")+"/timespan"
+else:
+    return ""
 ```
 
 #### _DateValid_
 From column: _DateValid_
 ``` python
-if getValue("Dated")!="NA" and getValue("Dated")!="N/A" and getValue("Dated")!="n.d.":
-    return getValue("Dated")
+#if getValue("Dated")!="NA" and getValue("Dated")!="N/A" #and getValue("Dated")!="n.d.":
+if getValue("BeginDateValid"):
+    return getValue("BeginDateValid") + " to " + getValue("EndDateValid")
 else:
     return ""
 ```
@@ -214,7 +224,7 @@ else:
 From column: _BeginDateValid_
 ``` python
 if getValue("Begin Date")!='0': 
-    return getValue("Begin Date")
+    return getValue("Begin Date") + "-01-01"
 else:
     return ""
 ```
@@ -234,7 +244,10 @@ return getValue("ObjectURI")+"/dimension"
 #### _DescriptionURI_
 From column: _DescriptionURI_
 ``` python
-return getValue("ObjectURI")+"/description"
+if getValue("Description"):
+    return getValue("ObjectURI")+"/description"
+else:
+    return ""
 ```
 
 #### _ObjectURL1_
@@ -327,6 +340,15 @@ From column: _DepartmentURI_
 return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 ```
 
+#### _EndDateValid_
+From column: _BeginDateValid_
+``` python
+if getValue("Begin Date")!='0': 
+    return getValue("Begin Date") + "-12-31"
+else:
+    return ""
+```
+
 
 ## Selections
 
@@ -351,6 +373,7 @@ return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object3`|
 | _DimensionURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _Dimensions_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
+| _EndDateValid_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _ImageURI_ | `uri` | `crm:E38_Image1`|
 | _MaterialURI_ | `uri` | `crm:E57_Material1`|
 | _Medium_ | `skos:prefLabel` | `crm:E57_Material1`|
