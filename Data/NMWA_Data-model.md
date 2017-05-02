@@ -118,6 +118,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/ulan/500404082`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -366,8 +371,8 @@ else:
 | _CultureTypeURI_ | `uri` | `crm:E55_Type4`|
 | _CultureURI_ | `uri` | `crm:E17_Type_Assignment1`|
 | _DateValid_ | `rdfs:label` | `crm:E52_Time-Span1`|
-| _Department_ | `rdf:value` | `crm:E55_Type1`|
 | _Department_ | `rdfs:label` | `crm:E55_Type1`|
+| _Department_ | `rdf:value` | `crm:E55_Type1`|
 | _DepartmentURI_ | `uri` | `crm:E55_Type1`|
 | _Description_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object3`|
@@ -423,5 +428,6 @@ else:
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300266036`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500404082`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404621`|
 | `crm:E42_Identifier2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
