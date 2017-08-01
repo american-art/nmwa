@@ -1,86 +1,6 @@
 # NMWA_Data.csv
 
 ## Add Column
-#### _ObjectURI_
-From column: _ObjectID_
-<br/>Value: ``
-
-#### _ObjectNumberURI_
-From column: _ObjectURI_
-<br/>Value: ``
-
-#### _ObjectNumberType_
-From column: _Object Number_
-<br/>Value: ``
-
-#### _CreditURI_
-From column: _Column_1_
-<br/>Value: ``
-
-#### _CreditType_
-From column: _Credit_
-<br/>Value: ``
-
-#### _DepartmentURI_
-From column: _CreditType_
-<br/>Value: ``
-
-#### _ClassificationTypeURI_
-From column: _Department_
-<br/>Value: ``
-
-#### _CultureURI_
-From column: _Classification_
-<br/>Value: ``
-
-#### _ProductionURI_
-From column: _Column_3_
-<br/>Value: ``
-
-#### _ActorURI_
-From column: _ProductionURI_
-<br/>Value: ``
-
-#### _PrimaryTitle_
-From column: _Title_
-<br/>Value: ``
-
-#### _PrimaryTitleURI_
-From column: _Title_
-<br/>Value: ``
-
-#### _PrimaryTitleType_
-From column: _PrimaryTitle_
-<br/>Value: ``
-
-#### _TimespanURI_
-From column: _Attribution_
-<br/>Value: ``
-
-#### _DateValid_
-From column: _Dated_
-<br/>Value: ``
-
-#### _BeginDateValid_
-From column: _DateValid_
-<br/>Value: ``
-
-#### _MaterialURI_
-From column: _PrimaryTitleType_
-<br/>Value: ``
-
-#### _DimensionURI_
-From column: _Medium_
-<br/>Value: ``
-
-#### _DescriptionURI_
-From column: _Dimensions_
-<br/>Value: ``
-
-#### _ObjectURL_
-From column: _Object Details Web Page/ Link to Object on Website_
-<br/>Value: ``
-
 
 ## Add Node/Literal
 #### Literal Node: `http://vocab.getty.edu/aat/300404621`
@@ -126,43 +46,43 @@ Literal Type: ``
 
 ## PyTransforms
 #### _ObjectURI_
-From column: _ObjectURI_
+From column: _ObjectID_
 ``` python
 return "object/"+getValue("ObjectID")
 ```
 
 #### _ObjectNumberURI_
-From column: _ObjectNumberURI_
+From column: _ObjectURI_
 ``` python
 return getValue("ObjectURI")+"/object_number"
 ```
 
 #### _ObjectNumberType_
-From column: _ObjectNumberType_
+From column: _Object Number_
 ``` python
 return "aat:300404621"
 ```
 
 #### _CreditURI_
-From column: _CreditURI_
+From column: _Column_1_
 ``` python
 return getValue("ObjectURI")+"/credit"
 ```
 
 #### _CreditType_
-From column: _CreditType_
+From column: _Credit_
 ``` python
 return "aat:300026687"
 ```
 
 #### _ClassificationTypeURI_
-From column: _ClassificationTypeURI_
+From column: _Department_
 ``` python
 return getValue("ObjectURI")+"/classification"
 ```
 
 #### _CultureURI_
-From column: _CultureURI_
+From column: _Classification_
 ``` python
 if getValue("Culture"):
     return UM.uri_from_fields("thesauri/culture/",getValue("Culture"))
@@ -171,13 +91,13 @@ else:
 ```
 
 #### _PrimaryTitle_
-From column: _PrimaryTitle_
+From column: _Title_
 ``` python
 return getValue("Title")
 ```
 
 #### _PrimaryTitleURI_
-From column: _PrimaryTitleURI_
+From column: _Title_
 ``` python
 if getValue("Title"):
     return UM.uri_from_fields("thesauri/title/",getValue("Title"))
@@ -186,47 +106,28 @@ else:
 ```
 
 #### _PrimaryTitleType_
-From column: _PrimaryTitleType_
+From column: _PrimaryTitle_
 ``` python
 return "aat:300404012"
 ```
 
-#### _ProductionURI_
-From column: _ProductionURI_
-``` python
-if getValue("TimeSpanURI") or getValue("ActorURI"):
-    return getValue("ObjectURI")+"/production"
-else:
-    return ""
-```
-
 #### _ActorURI_
-From column: _ActorURI_
+From column: _ProductionURI_
 ``` python
 return "constituent/"+SM.fingerprint_string(getValue("Display Name"))
 ```
 
-#### _TimespanURI_
-From column: _TimespanURI_
+#### _ProductionURI_
+From column: _Column_3_
 ``` python
-if getValue("DateValid"):
-    return getValue("ObjectURI")+"/timespan"
+if getValue("TimeSpanURI") or getValue("ActorURI"):
+  return getValue("ObjectURI")+"/production"
 else:
-    return ""
-```
-
-#### _DateValid_
-From column: _DateValid_
-``` python
-#if getValue("Dated")!="NA" and getValue("Dated")!="N/A" #and getValue("Dated")!="n.d.":
-if getValue("BeginDateValid"):
-    return getValue("BeginDateValid") + " to " + getValue("EndDateValid")
-else:
-    return ""
+  return ""
 ```
 
 #### _BeginDateValid_
-From column: _BeginDateValid_
+From column: _DateValid_
 ``` python
 if getValue("Begin Date")!='0': 
     return getValue("Begin Date") + "-01-01"
@@ -235,19 +136,19 @@ else:
 ```
 
 #### _MaterialURI_
-From column: _MaterialURI_
+From column: _PrimaryTitleType_
 ``` python
 return UM.uri_from_fields("material/",getValue("Medium"))
 ```
 
 #### _DimensionURI_
-From column: _DimensionURI_
+From column: _Medium_
 ``` python
 return getValue("ObjectURI")+"/dimension"
 ```
 
 #### _DescriptionURI_
-From column: _DescriptionURI_
+From column: _Dimensions_
 ``` python
 if getValue("Description"):
     return getValue("ObjectURI")+"/description"
@@ -283,7 +184,7 @@ return getValue("PrimaryTitle")
 ```
 
 #### _ImageURI_
-From column: _ObjectURL_
+From column: _Object Details Web Page/ Link to Object on Website_
 ``` python
 if getValue("Image Full Size URL"):
     return getValue("ObjectURL")
@@ -340,7 +241,7 @@ return getValue("ObjectURI")+"/pref_id"
 ```
 
 #### _DepartmentURI_
-From column: _DepartmentURI_
+From column: _CreditType_
 ``` python
 return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 ```
@@ -350,6 +251,24 @@ From column: _BeginDateValid_
 ``` python
 if getValue("Begin Date")!='0': 
     return getValue("Begin Date") + "-12-31"
+else:
+    return ""
+```
+
+#### _DateValid_
+From column: _Dated_
+``` python
+if getValue("BeginDateValid"):
+    return getValue("BeginDateValid") + " to " + getValue("EndDateValid")
+else:
+    return ""
+```
+
+#### _TimespanURI_
+From column: _Attribution_
+``` python
+if getValue("DateValid"):
+    return getValue("ObjectURI") + "/timespan"
 else:
     return ""
 ```
@@ -371,8 +290,8 @@ else:
 | _CultureTypeURI_ | `uri` | `crm:E55_Type4`|
 | _CultureURI_ | `uri` | `crm:E17_Type_Assignment1`|
 | _DateValid_ | `rdfs:label` | `crm:E52_Time-Span1`|
-| _Department_ | `rdfs:label` | `crm:E55_Type1`|
 | _Department_ | `rdf:value` | `crm:E55_Type1`|
+| _Department_ | `rdfs:label` | `crm:E55_Type1`|
 | _DepartmentURI_ | `uri` | `crm:E55_Type1`|
 | _Description_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object3`|
