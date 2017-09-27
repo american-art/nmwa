@@ -187,7 +187,7 @@ return getValue("PrimaryTitle")
 From column: _Object Details Web Page/ Link to Object on Website_
 ``` python
 if getValue("Image Full Size URL"):
-    return getValue("ObjectURL")
+    return getValue("Image Full Size URL")
 else:
     return ""
 ```
