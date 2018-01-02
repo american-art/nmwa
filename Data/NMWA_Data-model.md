@@ -260,7 +260,7 @@ return "National Museum of Wildlife Art"
 | _Culture_ | `rdfs:label` | `crm:E55_Type3`|
 | _CultureTypeURI_ | `uri` | `crm:E55_Type3`|
 | _CultureURI_ | `uri` | `crm:E17_Type_Assignment2`|
-| _DateLabel_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _Department_ | `rdf:value` | `crm:E55_Type1`|
 | _DepartmentURI_ | `uri` | `crm:E55_Type1`|
 | _Description_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
@@ -309,10 +309,10 @@ return "National Museum of Wildlife Art"
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
