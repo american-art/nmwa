@@ -268,7 +268,7 @@ return "National Museum of Wildlife Art"
 | _DimensionURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _Dimensions_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _EndDateValid_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
-| _ImageURL_ | `crm:P138i_has_representation` | `crm:E22_Man-Made_Object1`|
+| _ImageURL_ | `uri` | `crm:E38_Image1`|
 | _MaterialURI_ | `uri` | `crm:E57_Material1`|
 | _Medium_ | `skos:prefLabel` | `crm:E57_Material1`|
 | _Object Number_ | `rdf:value` | `crm:E42_Identifier2`|
@@ -305,14 +305,15 @@ return "National Museum of Wildlife Art"
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object3`|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
+| `crm:E22_Man-Made_Object1` | `crm:P138i_has_representation` | `crm:E38_Image1`|
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
+| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
