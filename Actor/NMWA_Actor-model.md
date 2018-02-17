@@ -99,7 +99,7 @@ else:
 #### _DeathURI_
 From column: _Death Year _
 ``` python
-if getValue("Death Year ") == '':
+if getValue("Death Year") == '':
     return ""
 else:
     return getValue("ConstituentURI")+"/death"
@@ -108,7 +108,7 @@ else:
 #### _DeathYearURI_
 From column: _Death Year _
 ``` python
-if getValue("Death Year ") == '':
+if getValue("Death Year") == '':
     return ""
 else:
      return getValue("ConstituentURI")+"/death_year"
@@ -117,30 +117,30 @@ else:
 #### _DeathYearBegin_
 From column: _Death Year _
 ``` python
-if getValue("Death Year ") == '':
+if getValue("Death Year") == '':
     return ""
-elif '/' in getValue("Death Year "):
-    return getValue("Death Year ")
+elif '/' in getValue("Death Year"):
+    return getValue("Death Year")
 else:
-    return  getValue("Death Year ")+"-01-01"
+    return  getValue("Death Year")+"-01-01"
 ```
 
 #### _DeathYearEnd_
 From column: _Death Year _
 ``` python
-if getValue("Death Year ") == '':
+if getValue("Death Year") == '':
     return ""
-elif '/' in getValue("Death Year "):
-    return getValue("Death Year ")
+elif '/' in getValue("Death Year"):
+    return getValue("Death Year")
 else:
-    return  getValue("Death Year ")+"-12-31"
+    return  getValue("Death Year")+"-12-31"
 ```
 
 #### _NationalityURI_
 From column: _Nationality _
 ``` python
-if getValue("Nationality "):
-    return UM.uri_from_fields("thesauiri/nationality/",getValue("Nationality "))
+if getValue("Nationality"):
+    return UM.uri_from_fields("thesauri/nationality/",getValue("Nationality"))
 else:
     return ""
 ```
@@ -172,7 +172,7 @@ else:
 | _BirthYearEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _BirthYearURI_ | `uri` | `crm:E52_Time-Span1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
-| _Death Year _ | `rdfs:label` | `crm:E52_Time-Span2`|
+| _Death Year_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _DeathYearBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _DeathYearEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
@@ -180,7 +180,7 @@ else:
 | _Display Name_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _NameLabel_ | `rdfs:label` | `crm:E39_Actor1`|
 | _NameURI_ | `uri` | `crm:E82_Actor_Appellation1`|
-| _Nationality _ | `rdfs:label` | `crm:E74_Group1`|
+| _Nationality_ | `rdfs:label` | `crm:E74_Group1`|
 | _NationalityURI_ | `uri` | `crm:E74_Group1`|
 
 
